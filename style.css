@@ -1,0 +1,85 @@
+@font-face { font-family: "Playfair Display"; font-style: normal; font-weight: 400; font-display: swap; src: url("fonts/PlayfairDisplay-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Raleway"; font-style: italic; font-weight: 400; font-display: swap; src: url("fonts/Raleway-400-italic.woff2") format("woff2"); }
+@font-face { font-family: "Raleway"; font-style: normal; font-weight: 400; font-display: swap; src: url("fonts/Raleway-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Raleway"; font-style: normal; font-weight: 700; font-display: swap; src: url("fonts/Raleway-700-normal.woff2") format("woff2"); }
+
+* { box-sizing: border-box; }
+
+html { font-size: 100%; }
+
+body {
+  margin: 0;
+  background: #fff;
+  color: #4d4d4d;
+  font: 400 1.0625rem/1.5 "Raleway", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: #6b6b6b; text-decoration: none; transition: color .2s; }
+a:hover, a:focus { color: #000; }
+
+img { max-width: 100%; height: auto; display: block; }
+
+.screen-reader-text {
+  position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;
+  overflow: hidden; clip-path: inset(50%); border: 0; white-space: nowrap;
+}
+.skip-content {
+  position: absolute; left: -9999px;
+}
+.skip-content:focus {
+  left: 5px; top: 5px; z-index: 100; background: #fff; padding: .5em 1em;
+}
+
+.max-width { max-width: 68.75rem; margin: 0 auto; padding: 0 4%; }
+
+/* Header */
+.site-header { position: relative; text-align: center; padding-top: 1.5rem; }
+
+.menu-primary ul {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; justify-content: center; gap: 2.2em;
+}
+.menu-primary a {
+  font-size: .8rem; letter-spacing: .1em; text-transform: uppercase;
+  color: #6b6b6b; padding: .4em 0; border-bottom: 2px solid transparent;
+}
+.menu-primary a:hover, .menu-primary .current a { color: #000; border-color: #000; }
+
+.toggle-navigation {
+  display: none; background: none; border: 0; padding: .5em; cursor: pointer;
+  position: absolute; top: .8rem; right: 0;
+}
+
+.title-container { margin: 2em 0 3em; }
+.logo { height: 125px; width: 125px; margin: 0 auto; }
+
+/* Content */
+.main { max-width: 50rem; margin: 0 auto; }
+
+.featured-image { margin-bottom: 1.5rem; }
+.featured-image img { width: 100%; }
+
+.post-header { text-align: center; margin-bottom: 1.5rem; }
+.post-title {
+  font: 400 2.25rem/1.2 "Playfair Display", serif;
+  color: #333; margin: 0;
+}
+
+.post-content h2, .post-content h3 {
+  font-family: "Playfair Display", serif; font-weight: 400; color: #333;
+}
+.post-content h2 { font-size: 1.75rem; margin: 2em 0 .6em; }
+.post-content h3 { font-size: 1.25rem; margin: 1.6em 0 .5em; }
+.post-content p { margin: 0 0 1.5em; }
+
+.site-footer { padding: 3rem 0; }
+
+/* Mobile */
+@media (max-width: 799px) {
+  .toggle-navigation { display: block; }
+  .menu-primary { display: none; margin-top: 2.5rem; }
+  .menu-primary.open { display: block; }
+  .menu-primary ul { flex-direction: column; gap: .5em; }
+  .post-title { font-size: 1.75rem; }
+}

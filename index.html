@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Herzlich Willkommen! - Julia Eikermann</title>
+  <link rel="icon" href="img/favicon.jpg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-content" href="#main">Zum Inhalt springen</a>
+  <div class="max-width">
+    <header class="site-header">
+      <button id="toggle-navigation" class="toggle-navigation" aria-expanded="false" aria-controls="menu-primary">
+        <span class="screen-reader-text">Menü öffnen</span>
+        <svg width="24" height="18" viewBox="0 0 24 18" aria-hidden="true" fill="#6B6B6B">
+          <rect y="0" width="24" height="2"/><rect y="8" width="24" height="2"/><rect y="16" width="24" height="2"/>
+        </svg>
+      </button>
+      <nav id="menu-primary" class="menu-primary" aria-label="Hauptmenü">
+        <ul>
+          <li class="current"><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="kontakt/">Impressum</a></li>
+        </ul>
+      </nav>
+      <div class="title-container">
+        <a href="index.html"><img class="logo" src="img/logo.jpg" alt="Julia Eikermann"></a>
+      </div>
+    </header>
+
+    <main id="main" class="main">
+      <article>
+        <div class="featured-image">
+          <img src="img/DSCN3610.jpg" srcset="img/DSCN3610-768x1024.jpg 768w, img/DSCN3610.jpg 1500w"
+               sizes="(max-width: 1500px) 100vw, 1500px" width="1500" height="2000" alt="">
+        </div>
+        <div class="post-header"><h1 class="post-title">Herzlich Willkommen!</h1></div>
+      </article>
+    </main>
+
+    <footer class="site-footer"></footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
